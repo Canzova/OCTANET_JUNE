@@ -1,0 +1,182 @@
+// Js for click function
+listContainer.addEventListener('click', function (e) {
+    if (e.target.tagName == 'LI') {
+        e.target.classList.toggle("checked");
+    }
+
+    else if (e.target.tagName == 'SPAN') {
+        e.target.parentElement.remove();
+    }
+}, false)
+
+// Sure! Let's break down the code step by step:
+
+// 1. `listContainer` is a variable that represents the UL.
+
+// 2. `addEventListener('click', function(e){})` is a function that adds a click event listener to the `listContainer` element.This means that when the user clicks on any element within the`listContainer`, the provided function will be executed.
+
+// 3. `e` is the event object that represents the click event.
+
+// 4. `e.target` refers to the element that triggered the click event.In this code, it represents the specific element that was clicked within the`listContainer`.
+
+// 5. `tagName` is a property of an HTML element that returns the tag name of the element in uppercase.For example, `<li>` will have a tag name of "LI" and `<span>` will have a tag name of "SPAN".
+
+// 6. The first condition `if (e.target.tagName == 'LI')` checks if the clicked element's tag name is "LI" (indicating that it's a list item). If true, it proceeds to the following code block.
+
+// 7. `e.target.classList.toggle("checked")` toggles the presence of the CSS class "checked" on the clicked list item.This class is used to visually mark the item as "checked" or selected.If the class is present, it will be removed; if not, it will be added.
+
+// 8. The second condition `else if (e.target.tagName == 'SPAN')` checks if the clicked element's tag name is "SPAN" (indicating that it's a span element). If true, it proceeds to the following code block.
+
+// 9. `e.target.parentElement.remove()` removes the parent element of the clicked span element from the DOM.This means that when a user clicks on a span within a list item, it will remove the entire list item from the list.
+
+// In summary, this code attaches a click event listener to`listContainer`.When the user clicks on a list item(LI element), it toggles the "checked" class on that list item, visually marking it as checked.If the user clicks on a span element within a list item, it removes the entire list item from the list.
+
+
+Why we have written false----->
+
+The parameter `false` in the `addEventListener` function specifies the event listener's capturing/bubbling behavior. In simpler terms, it determines the order in which the event is handled when multiple elements are nested within each other.
+
+When set to `false`, it means that the event will be handled in the bubbling phase. The bubbling phase starts from the innermost element that triggered the event and goes up the DOM tree to the outermost element.
+
+To understand it better, imagine you have a set of nested elements, such as a div inside a div inside a div. When an event occurs within the innermost div, like a click, the event will first be handled by the innermost div, then its parent div, and finally the outermost div.
+
+By setting the third parameter to `false`, you're instructing the event listener to use the bubbling phase. This is the default behavior, and most of the time, you don't need to explicitly specify it. However, you can set it to `true` to use the capturing phase, where the event is handled from the outermost element to the innermost element.
+
+In summary, setting `false` as the third parameter in `addEventListener` means that the event will be handled in the bubbling phase, going from the innermost element to the outermost element.
+
+why e ----->
+
+We can choose any valid variable name to represent the event object instead of using e. The variable name e is commonly used as a shorthand for the event object, but it is not mandatory. You can use any variable name that is valid in JavaScript.
+
+-------------------------------SaveData and showTask------------------------------
+
+
+-----------------------------------------------------Priority----------------------------------------------------
+
+    To prevent users from manually entering a value greater than 5 or less than 1 in the input field, you can use JavaScript to validate the input. Here's an example of how you can achieve this:
+
+    <input type="number" id="priorityInput" placeholder="Priority (1-5)" min="1" max="5" onblur="validatePriority(this)">
+
+    In this code snippet, we've added an onblur event handler to the input field. This event is triggered when the user moves focus away from the input field (e.g., by clicking outside the field or pressing the Tab key).
+
+    In the code snippet `onblur="validatePriority(this)"`, `this` is used to pass the reference of the input field to the `validatePriority` function. 
+
+    When the `onblur` event occurs (which happens when the user moves focus away from the input field), the `validatePriority` function is called. By passing `this` as an argument, we are passing a reference to the input field element itself.
+
+    Inside the `validatePriority` function, `input` represents the parameter that receives this reference. It allows us to access properties and methods of the input field, such as `input.value`, which retrieves the value entered by the user.
+
+    By passing `this`, we enable the `validatePriority` function to work with the specific input field that triggered the `onblur` event. It allows us to validate and manipulate that particular input field, rather than a generic or hardcoded input field elsewhere in the code.
+
+    Same code for the validatePriority function
+    
+    function validatePriority(input) {
+        const value = parseInt(input.value);
+        if (isNaN(value) || value < 1 || value > 5) {
+          input.value = '';
+          // You can also display an error message to the user if desired
+        }
+      }
+
+
+
+      Certainly! Here's a line-by-line explanation of the JavaScript
+      
+      function validatePriority(input) {
+
+      
+    //  - This line defines a JavaScript function called `validatePriority` that takes an `input` parameter. This function will be responsible for validating the priority input.
+      
+      
+        const value = parseInt(input.value);
+
+      
+    //  - This line declares a variable called `value` and assigns it the parsed integer value of `input.value`. The `input.value` retrieves the current value entered by the user in the input field.
+
+    // parseInt(): This is a JavaScript function that parses a string and returns an integer. It takes a string as an argument and attempts to convert it into an integer.
+      
+      
+        if (isNaN(value) || value < 1 || value > 5) {
+
+      
+    //  - This line checks if the parsed `value` is not a number (isNaN(value)) or if it is less than 1 or        greater than 5. If any of these conditions are true, it means the input value is invalid.
+      
+      
+        input.value = '';
+
+      
+    //  - This line sets the value of the input field to an empty string, effectively clearing the invalid input that the user entered.
+      
+      
+          // You can also display an error message to the user if desired
+        }
+      }
+
+      
+    //  - This block of code is executed when an invalid input value is detected. You can add code here to display an error message to the user if you want. You can use JavaScript to manipulate the DOM and show an error message near the input field or in any other way you prefer.
+      
+      By using this JavaScript code, you can ensure that the user can only enter values between 1 and 5 in the input field. If they enter an invalid value manually, it will be automatically cleared.
+
+
+-----------------------------------For same Task--------------------------------------------------------
+
+if (inputbox.value === previousInput) {
+    alert('You entered the same task again: ' + inputbox.value);
+} else{
+    previousInput = inputbox.value;
+
+    // Rest of the code
+}
+
+---------------------------------------Output According to the priority------------------------------------
+
+
+------------------------------> Sort methods
+
+                function sortTasksByPriority() {
+                    tasks.sort((a, b) => b.priority - a.priority);
+                }
+
+                or
+
+                const points = [40, 100, 1, 5, 25, 10];
+                points.sort(function(a, b){return b - a});
+
+explanation : 
+
+The sortTasksByPriority function doesn't take any parameters.
+
+Inside the function, we use the sort method of the tasks array to sort its elements. The sort method arranges the elements of an array in place, meaning it modifies the original array directly.
+
+The sort method takes a comparison function as an argument to determine the sorting order. In our case, we pass an arrow function (a, b) => b.priority - a.priority as the comparison function.
+
+The comparison function (a, b) => b.priority - a.priority defines the logic for comparing two tasks (a and b) based on their priorities.
+
+The arrow function subtracts the priority of task a from the priority of task b (b.priority - a.priority). This comparison helps determine the relative order of the two tasks during the sorting process.
+
+If the result of the subtraction is a positive number, it means that b has a higher priority than a, so b should come before a in the sorted array.
+
+If the result is zero, it means that both tasks have the same priority, so their order remains unchanged.
+
+If the result is a negative number, it means that a has a higher priority than b, so a should come before b in the sorted array.
+
+After the sorting is completed, the tasks array will be rearranged in descending order of priority.
+
+By using the sort method and providing a comparison function, the sortTasksByPriority function allows us to sort the tasks array based on the priority property of each task, ensuring that the tasks are displayed in the desired order.
+
+Code for sorting in increasing order 
+function sortTasksByPriority() {
+    tasks.sort((a, b) => a.priority - b.priority);
+  }
+
+-------------------------------> Main logic
+
+we are basically craeting an array named as lists. We are adding / pushing an object named as task which is having task, priority and deadline values.
+
+When the user enters any task we push it into the object and in the tasks array, Then we are calling the sorting function to sort the array as per priority and the calling the display. 
+
+Each time we call the display functyion it first clears the values or data of listConatiner and then re enters all the tags created such as li, span, small etc. 
+
+So basically we are taking the input shorting it and storing it. Again when user enters any data we are taking it, sorting it and clearing the previous values and then storing it into theb listContainer.
+
+  
+      

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do List <img src="images/icon.png"></h2>
+            <div class="row">
+                <input type="text" , id="input-box" placeholder="Add your text">
+                <input type="number" id="priorityInput" placeholder="Priority (1-5)" min="1" max="5" onblur="validatePriority(this)">
+                <input type="date" id="deadlineInput" placeholder="Enter a deadline">
+
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-containers">
+                <!-- <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
