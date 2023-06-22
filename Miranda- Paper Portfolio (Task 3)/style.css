@@ -1,0 +1,504 @@
+/* In the below code we are simply giving name to our font and giving url as it is in the same folder  */
+
+@font-face {
+    font-family: domain;
+    src: url(./5f242a69b1577e63266b4d72_DomaineDispCondMedium.ttf);
+}
+@font-face {
+    font-family: editorial;
+    src: url(./5f242a694256f02b944d5767_EditorialNew-Light.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #C5BDB3;
+}
+  
+#main{
+    background-color: black;
+    overflow-x: hidden;
+}
+#page1{
+    /* When we give height : 100% it takes height ccording to its parent element---> In the below case we dont have the style for the parent of page 1. Thats why we have written height : 100vh */
+
+    /* Page 1 will take all the viewport height and width */
+    height: 135vh;
+    width: 100vw;
+    background-color: #C5BDB3;
+    position: relative;
+    /* overflow: hidden; */
+    text-align: center;
+}
+#nav{
+    height: 80px;
+    /* background-color: blueviolet; */
+    width: 100%;
+    display: flex;
+    padding: 0 30px;
+    align-items: center;  /*----> For y axix */
+    justify-content: space-evenly; /*----> For x axix */
+    /* for line  */
+    border-bottom: 1px solid #222;
+    background-color: #C5BDB3;
+}
+
+#nav img{
+    height: 30px;
+    width: 100%;
+}
+#nav h5{
+    font-size: 20px;
+    font-weight: 100;
+    width: 30%;
+    color: #807C74;
+}
+#nav i{
+    width: 30%;
+    text-align: right;
+}
+#elems{
+    /* background-color: red; */
+    height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 60px;
+    padding-bottom: 40px;
+}
+#elem1{
+    width: 30%;
+    height: 100%;
+    /* background-color: blue; */
+}
+#elem2{
+    width: 30%;
+    height: 100%;
+    /* background-color: blue; */
+    border-left: 1px solid #595959;
+    padding: 20px 60px;
+    text-align: center;
+    border-right: 1px solid #595959;
+}
+#elem3{
+    width: 30%;
+    height: 100%;
+    /* background-color: blue; */
+}
+#elem1 #img-div{
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid black;
+}
+#img-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition:all ease  0.5s;
+}
+
+#elem3 #img-div{
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+#img-div:hover img{
+    scale: 1.1;
+}
+#elem1 h4{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: canopee;
+    text-align: left;
+}
+#elem1 p{
+    font-size: 25px;
+    font-weight: 100;
+    font-family: domain;
+    color: #78746D;
+    text-align: left;
+}
+#elem1 span{
+    background-color: #CA2A0C;
+    color: #C5BDB3;
+    font-weight: 100;
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+#elem3 h4{
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: canopee;
+    text-align: left;
+}
+#elem3 p{
+    font-size: 25px;
+    font-weight: 100;
+    font-family: domain;
+    color: #78746D;
+    text-align: left;
+}
+#elem3 span{
+    background-color: #CA2A0C;
+    color: #C5BDB3;
+    font-weight: 100;
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+#elem2 h2{
+    font-family: canopee;
+    font-size: 80px;
+    font-weight: 500;
+}
+#elem2 h3{
+    font-family: domain;
+    font-size: 40px;
+    font-weight: 100;
+    color: #21211F;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+#elem2 h6{
+    font-family: domain;
+    font-size: 30px;
+    font-weight: 100;
+    color: #21211F;
+}
+#elem2 h6 span{
+   font-weight: bold;
+   font-family: canopee;
+}
+#page1 h1{
+    font-size: 620px;
+    font-family: canopee;
+    background-color: #1C1C1A;
+    color: #C3BCB2;
+    font-weight: 200;
+    text-align: center;
+    line-height: 460px;
+    width: 96%;
+    margin-left: 4%;
+    padding-right: 20px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 40px 0;
+    letter-spacing: -15px;
+}
+#page2{
+    padding-top: 100px;
+    height: 190vh;
+    width: 100%;
+    background: #C3BCB2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* overflow: hidden; */
+    padding-bottom: 100px;
+    /* margin-bottom: 200px; */
+}
+#page2-left{
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 35%;
+    border-right: 1px solid #222;
+}
+#page2-left img{
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid black;
+}
+#page2-left p{
+   font-size: 40px;
+    font-family: editorial;
+   color: black;
+   font-weight: 100;
+   padding-top: 20px;
+}
+/* #page2-left p span{
+    font-family: domain;
+   font-size: 100px;
+   background-color: black;
+   color: #C3BCB2;
+   margin-left: 0px;
+   padding: 0;
+} */
+#page2-left h2{
+    font-size: 130px;
+    font-family: canopee;
+    text-align: center;
+    line-height: 90px;
+}
+#page2-left span{
+    display: inline-block;
+    padding-top: 50px;
+    font-size: 200px;
+    font-family: canopee;
+    text-align: center;
+    line-height: 90px;
+    margin-left: 50px;
+    margin-bottom: 45px;
+}
+#page2-right{
+    height: 100%;
+    width: 65%;
+    padding: 0 30px;
+}
+#page2-right img{
+    height: 55%;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid black;
+}   
+#page2-right p{
+    padding: 40px 0;
+    font-family: canopee;
+    font-size: 135px;
+    font-weight: 500;
+    color: #1C1C1A;
+    /* padding-bottom: 90px; */
+    line-height: 130px;
+}
+#page3{
+    height: 65vh;
+    background-color: #C4BCB3;
+    position: relative;
+    padding-bottom: 50px;
+    /* overflow: hidden; */
+}
+#page3 h1{
+    font-size: 530px;
+    font-weight: 100;
+    color: #C4BCB3;
+    width: fit-content;
+    background-color: #1C1C1A;
+    margin-left: 2%;
+    line-height: 450px;
+    padding-left:20px;
+    padding-right:40px;
+    padding-top: 20px;
+    font-family: canopee;
+    letter-spacing: -15px;
+}
+#page3 img{
+    height: 470px;
+    position: absolute;
+    top :0px;
+    right: 2%;
+}
+#page4{
+    height: 140vh;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    background-color: #C4BCB3;
+}
+#page4-left{
+    width: 70%;
+    height: 100%;
+    padding: 50px 30px;
+    padding-bottom: 0;
+    border-right: 1px solid black;
+}
+
+#page4-left-elems{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+}
+
+#page4-left-elems #elem1{
+    width: 50%;
+    margin: 40px;
+}
+#page4-left-elems #elem1 #img-div{
+    height: 60%;
+    width: 85%;
+}
+#page4-left-elems #elem1 img{
+    width: 100%;
+}
+#page4-left-elems #elem1 h4{
+    font-family: domain;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#page4-left-elems #elem1 p{
+    color: #222;
+    font-family: editorail;
+    font-weight: 0;
+}
+
+#page4-left-elems #elem2{
+    padding-top: 0;
+    width: 40%;
+    text-align: left;
+    padding-left: 0px;
+    margin-right: 20px;
+    border: none;
+    border-right: 1px solid black;
+}
+#page4-left-elems #elem2 h2{
+    font-family: domain;
+    font-size: 65px;
+    padding-left: 0;
+    font-weight: 600;
+}
+#page4-left-elems #elem2 h3{
+    padding-top: 10px;
+    color: #222;
+
+    font-family: editorial;
+}
+
+.big-img{
+    margin: auto;
+    padding: 30px 30px;
+    height: 70%;
+    width: 100%;
+    margin-bottom: 60px;
+}
+#page4-right{
+    color: #1C1B19;
+    text-align: center;
+    width: 35%;
+    height: 100%;
+    padding: 50px 30px;
+}
+#page4-right h1{
+    font-family: canopee;
+    font-size: 110px;
+}
+#page4-right h1 span{
+    display: inline-block;
+    font-size: 200px;
+}
+
+#page4-right p{
+    margin-top: 30px;
+    font-size: 35px;
+    font-family: editorial;
+    /* font-weight: 100; */
+    /* margin-bottom: 80px;
+    line-height: 30px; */
+}
+#page4-right #circle{
+    height: 200px;
+    background-color: #CCC3B8;
+    border-radius: 50%;
+    width: 100%;
+    border: 1px solid #1C1C1A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-top: 60px;
+}
+#circle h1{
+    font-size: 70px;
+    font-family: canopee;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-23%);
+    transition: all ease 0.6s;
+}
+#circle img{
+   height: 50px;
+   transform: translateX(-100%);
+   transition: all ease 0.6s;
+}
+
+#circle:hover img{
+    transform: translateX(100%);
+}
+#circle:hover h1{
+    transform: translateX(140%);
+}
+
+#page5{
+    padding: 25px 0;
+    width: 100%;
+    background-color: #C4BCB3;
+    /* To make bith h1 in a single line */
+
+    /* The CSS property `white-space: nowrap;` is used to prevent text from wrapping to the next line when it reaches the end of its container. In simpler terms, it makes sure that a long line of text stays on a single line without breaking or wrapping to the next line. */
+
+
+    white-space: nowrap;
+    /* For scrolling */
+    overflow-x: auto;  
+    overflow-y: hidden;
+
+    border-top: 1px solid #1C1C1A;
+    border-bottom: 1px solid #1C1C1A;
+}
+/* To hide the scroller */
+#page5::-webkit-scrollbar{
+    display: none;
+}
+#page5 h1{
+    font-size: 70px;
+    font-family: domain;
+    font-weight: 100;
+    /* Blow line is important for animation effect */
+    display: inline-block;
+    margin-right: 30px;
+
+    animation-name: scroll;
+    /* For smooth animation */
+    animation-timing-function: linear ;
+    animation-duration: 3s;
+    /* For contiuous animation */
+    animation-iteration-count: infinite;
+}
+#page5 h1 span{
+    font-family: canopee;
+    background-color: #1C1C1A;
+    color: #C4BCB3;
+    padding: 0 12px;
+    font-size: 70px;
+}
+/* To pause the animation when hovered */
+#page5:hover h1{
+    animation-play-state: paused;
+}
+
+/* For animation */
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-100% - 34px));
+    }
+}
+#page6{
+    height: 50vh;
+    width: 100%;
+    padding: 25px 0;
+    background-color: #C4BCB3;
+}

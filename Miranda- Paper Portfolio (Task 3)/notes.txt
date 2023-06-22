@@ -1,0 +1,57 @@
+----->
+For picking up the colors from main website we are using color zilla chrome extention
+
+------>
+For icons we are using remix icons with thieir cdn
+
+------>
+For getting font from any website just open console. 
+Then go on network.
+Refresh the console.
+Now you can see all the used fonts on the page.
+Now double click on the fonts to download it.
+Fonts will be downloaded into woff2 format so convert it into ttf using internet.
+Now install it.
+Simply use font family and write the name of that font.
+Reopen the live server.
+.........................and enjoy!!!
+
+------->
+we are using gsap libraby for animations
+
+
+
+var tl = gsap.timeline();
+tl.to("#page1", {
+    y:"100vh",
+    scale:0.6,
+    duration:0
+})
+
+tl.to("#page1", {
+    y:"0vh",
+    duration:1,
+    delay:1
+})
+
+tl.to("#page1", {
+    y:"0vh",
+    rotate:360,
+    scale:1,
+    duration:0.8
+})
+
+// 1. The animation begins with the element "page1" initially positioned at the top of the page.
+
+// 2. The first animation sequence moves the element down from its initial position to a position at the bottom of the viewport (100% of the viewport height). The element is also scaled down to 0.6 times its original size. This animation has a duration of 0 seconds, meaning it happens instantly.
+
+// 3. After the first animation, there is a delay of 1 second.
+
+// 4. The second animation sequence moves the element up from its current position at the bottom of the viewport to a position that is 30% of the viewport height from the top. This animation has a duration of 1 second.
+
+// 5. Finally, the third animation sequence moves the element back to its original position at the top of the page (y: "0vh") while simultaneously rotating it 360 degrees. The element's scale is also restored to its original size. This animation has a duration of 0.8 seconds.// 
+
+In summary, the element starts at the top, moves down to the bottom with scaling, then moves up to a specific position while rotating.
+
+-------->
+Locomotive for scroll
